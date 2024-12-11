@@ -83,10 +83,17 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col text-gray-600">
-          <div onClick={()=>setVisible(false)} className="flex items-center gap-4 p-3">
+          <div
+            onClick={() => setVisible(false)}
+            className="flex items-center gap-4 p-3 cursor-pointer"
+          >
             <img className="h-4 rotate-180" src={assets.dropdown_icon} alt="" />
-            <button>Back</button>
+            <p>Back</p>
           </div>
+          <NavLink className='py-2 pl-6 border' to='/'>HOME</NavLink>
+          <NavLink className='py-2 pl-6 border' to='/collection'>COLLECTION</NavLink>
+          <NavLink className='py-2 pl-6 border' to='/about'>ABOUT</NavLink>
+          <NavLink className='py-2 pl-6 border' to='/contact'>CONTACT</NavLink>
         </div>
       </div>
       {/* sidebar end */}
