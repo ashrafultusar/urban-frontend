@@ -203,7 +203,7 @@ export const products = [
         sizes: ["M", "L", "XL"],
         date: 1716621235448,
         bestseller: false
-    },
+    }, 
     {
         _id: "aaaaj",
         name: "Men Tapered Fit Flat-Front Trousers",
