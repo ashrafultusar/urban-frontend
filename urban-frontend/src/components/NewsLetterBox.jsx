@@ -2,8 +2,8 @@ import React from 'react';
 
 const NewsLetterBox = () => {
     return (
-        <div>
-            
+        <div className='text-center'>
+            <p>Subscribe now & get 20% off</p>
         </div>
     );
 };
