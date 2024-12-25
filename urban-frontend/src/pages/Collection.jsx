@@ -12,9 +12,16 @@ const Collection = () => {
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
       {/* filter option code */}
       <div className="min-w-60">
-        <p onClick={()=>setShowFilter(!showFilter)} className="my-2 text-xl flex items-center cursor-pointer gap-2">
-                  FILTERS
-                  <img className={`h-3 sm:hidden ${showFilter?'rotate-90':''}`} src={assets.dropdown_icon} alt="" />
+        <p
+          onClick={() => setShowFilter(!showFilter)}
+          className="my-2 text-xl flex items-center cursor-pointer gap-2"
+        >
+          FILTERS
+          <img
+            className={`h-3 sm:hidden ${showFilter ? "rotate-90" : ""}`}
+            src={assets.dropdown_icon}
+            alt=""
+          />
         </p>
         {/* category filter */}
         <div
@@ -60,20 +67,24 @@ const Collection = () => {
             </p>
           </div>
         </div>
-          </div>
-          
-          {/* right side code */}
-<div className="flex-1">
-              <div className="flex justify-between text-base sm:text-2xl mb-4">
-                  <Title text1={"ALL"} text2={'COLLECTION'}></Title>
-                  {/* product sort */}
-                  <select className="border-2 border-gray-300 text-sm px-2">
-                      <option value="relavent">Sort by: Relavent</option>
-                      <option value="low-high">Sort by: low-high</option>
-                      <option value="high-low">Sort by: high-low</option>
-                  </select>
+      </div>
+
+      {/* right side code */}
+      <div className="flex-1">
+        <div className="flex justify-between text-base sm:text-2xl mb-4">
+          <Title text1={"ALL"} text2={"COLLECTION"}></Title>
+          {/* product sort */}
+          <select className="border-2 border-gray-300 text-sm px-2">
+            <option value="relavent">Sort by: Relavent</option>
+            <option value="low-high">Sort by: low-high</option>
+            <option value="high-low">Sort by: high-low</option>
+          </select>
               </div>
-          </div>
+              {/* map product */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
+                  
+              </div>
+      </div>
     </div>
   );
 };
