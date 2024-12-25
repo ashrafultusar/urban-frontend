@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { products } from "../assets/assets";
 
 export const ShopContext = createContext();
@@ -21,9 +21,13 @@ if (cartData[itemId]) {
 } else {
     cartData[itemId] = {};
     cartData[itemId][size] = 1;
-}
+        }
+        setCartItems(cartData)
     }
-    
+    useEffect(() => {
+        console.log(cartItems);
+    },[cartItems])
+
   const value = {
     products,
     currency,
@@ -31,7 +35,8 @@ if (cartData[itemId]) {
     search,
     setSearch,
     showSearch,
-    setShowSearch,
+      setShowSearch,
+    cartItems,addToCart
   };
 
   return (
