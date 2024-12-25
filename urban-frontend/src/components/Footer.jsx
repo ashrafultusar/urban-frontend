@@ -1,15 +1,23 @@
-import React from 'react';
+import React from "react";
+import { assets } from "../assets/assets";
 
 const Footer = () => {
-    return (
+  return (
+    <div>
+      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
         <div>
-            <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>
-                <div>
-                    
-</div>
-            </div>
-        </div>
-    );
+          <img className="mb-5 w-32" src={assets.logo} alt="" />
+          <p className="w-full md:w-2/3 text-gray-600">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
+            assumenda asperiores officiis quas enim quaerat ratione saepe.
+          </p>
+              </div>
+              <div>
+                  <p className="uppercase text-xl font-medium mb-5">company</p>
+              </div>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;
