@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ShopContext } from "../context/ShopContex";
+import { assets } from "../assets/assets";
 
 const Collection = () => {
   const { products } = useContext(ShopContext);
@@ -10,8 +11,9 @@ const Collection = () => {
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
       {/* filter option code */}
       <div className="min-w-60">
-        <p className="my-2 text-xl flex items-center cursor-pointer gap-2">
-          FILTERS
+        <p onClick={()=>setShowFilter(!showFilter)} className="my-2 text-xl flex items-center cursor-pointer gap-2">
+                  FILTERS
+                  <img className={`h-3 sm:hidden ${showFilter?'rotate-90':''}`} src={assets.dropdown_icon} alt="" />
         </p>
         {/* category filter */}
         <div
@@ -37,7 +39,7 @@ const Collection = () => {
         </div>
         {/* subcategory filter */}
         <div
-          className={`border border-gray-300 pl-5 py-3 mt-6 ${
+          className={`border border-gray-300 pl-5 py-3 my-5 ${
             showFilter ? "" : "hidden"
           } sm:block`}
         >
