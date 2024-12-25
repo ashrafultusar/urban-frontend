@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContex";
+import { assets } from "../assets/assets";
 
 const Product = () => {
   const { productId } = useParams();
@@ -45,8 +46,12 @@ const Product = () => {
               {/* product information code*/}
               <div className="flex-1">
                   <h1 className="font-medium text-2xl mt-2">{productData.name}</h1>
-                  <div className="">
-                      
+                  <div className="flex items-center gap-1 mt-2">
+                      <img className="w-3" src={assets.star_icon} alt="" />
+                      <img className="w-3" src={assets.star_icon} alt="" />
+                      <img className="w-3" src={assets.star_icon} alt="" />
+                      <img className="w-3" src={assets.star_icon} alt="" />
+                      <img className="w-3" src={assets.star_icon} alt="" />
                   </div>
 </div>
       </div>
