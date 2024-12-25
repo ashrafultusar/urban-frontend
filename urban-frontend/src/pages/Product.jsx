@@ -5,7 +5,7 @@ import { assets } from "../assets/assets";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products } = useContext(ShopContext);
+  const { products ,currency} = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
 
@@ -42,18 +42,20 @@ const Product = () => {
           <div className="w-full sm:w-[80%]">
             <img className="w-full h-auto" src={image} alt="" />
           </div>
+        </div>
+        {/* product information code*/}
+        <div className="flex-1">
+          <h1 className="font-medium text-2xl mt-2">{productData.name}</h1>
+          <div className="flex items-center gap-1 mt-2">
+            <img className="w-3" src={assets.star_icon} alt="" />
+            <img className="w-3" src={assets.star_icon} alt="" />
+            <img className="w-3" src={assets.star_icon} alt="" />
+            <img className="w-3" src={assets.star_icon} alt="" />
+            <img className="w-3" src={assets.star_dull_icon} alt="" />
+            <p className="pl-2">(122)</p>
+          </div>
+                  <p>{currency}{ productData.price}</p>
               </div>
-              {/* product information code*/}
-              <div className="flex-1">
-                  <h1 className="font-medium text-2xl mt-2">{productData.name}</h1>
-                  <div className="flex items-center gap-1 mt-2">
-                      <img className="w-3" src={assets.star_icon} alt="" />
-                      <img className="w-3" src={assets.star_icon} alt="" />
-                      <img className="w-3" src={assets.star_icon} alt="" />
-                      <img className="w-3" src={assets.star_icon} alt="" />
-                      <img className="w-3" src={assets.star_icon} alt="" />
-                  </div>
-</div>
       </div>
     </div>
   ) : (
