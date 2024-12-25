@@ -21,6 +21,9 @@ const Footer = () => {
                       <li>Privacy Policy</li>
                   </ul>
               </div>
+              <div>
+                  <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
+              </div>
       </div>
     </div>
   );
