@@ -48,6 +48,7 @@ const ShopContextProvider = (props) => {
                 }
             }
         }
+        return totalCount;
     }
     
   const value = {
@@ -59,7 +60,8 @@ const ShopContextProvider = (props) => {
     showSearch,
     setShowSearch,
     cartItems,
-    addToCart,
+      addToCart,
+    getCartCount
   };
 
   return (
