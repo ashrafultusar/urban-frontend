@@ -8,6 +8,14 @@ const Collection = () => {
   const { products } = useContext(ShopContext);
     const [showFilter, setShowFilter] = useState(false);
     const [filterProducts, setFilterProducts] = useState([])
+    const [category,setCategory]=useState([])
+const [subCategory,setSubCategory]=useState([])
+
+    const toggleCategory = (e) => {
+        if (category.includes(e.target.value)) {
+            setCategory(prev=>prev.filter(item=> item !== e.target.value))
+        }
+    }
     
     useEffect(() => {
         setFilterProducts(products);
