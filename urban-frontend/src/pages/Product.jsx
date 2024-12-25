@@ -88,18 +88,27 @@ const Product = () => {
             <p>Easy return and exchange policy within 7 days.</p>
           </div>
         </div>
+      </div>
+      {/* description and review section */}
+      <div className="mt-20">
+        <div className="flex">
+          <b className="border px-5 py-3 text-sm">Description</b>
+          <p className="border px-5 py-3 text-sm">Reviews (122)</p>
+        </div>
+        <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+            in?amet consectetur adipisicing elit. Expedita, in?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            aut, ut praesentium cumque ullam fuga?
+          </p>
+        </div>
           </div>
-          {/* description and review section */}
-          <div className="mt-20">
-              <div className="flex">
-                  <b className="border px-5 py-3 text-sm">Description</b>
-                  <p className="border px-5 py-3 text-sm">Reviews (122)</p>
-              </div>
-              <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, in?amet consectetur adipisicing elit. Expedita, in?</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aut, ut praesentium cumque ullam fuga?</p>
-              </div>
-</div>
+          {/* display latest product */}
+
+          
     </div>
   ) : (
     <div className="opacity-0"></div>
