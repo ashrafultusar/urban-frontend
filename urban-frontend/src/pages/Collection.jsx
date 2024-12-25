@@ -29,21 +29,25 @@ const [subCategory,setSubCategory]=useState([])
         }
 }
 
+    const applyFilter = () => {
+        
+        let productsCopy = products.slice();
+
+        if (category.length > 0) {
+            productsCopy=productsCopy.filter(item=>category.includes(item.category))
+        }
+
+        setFilterProducts(productsCopy)
+    }
 
     useEffect(() => {
         setFilterProducts(products);
     },[])
-// category and subcategory wise change product useEffect
-    useEffect(() => {
-    console.log(category);
-    }, [category])
-    
-    useEffect(() => {
-    console.log(subCategory);
-},[subCategory])
 
+    useEffect(() => {
+        applyFilter();
+    },[category,subCategory])
 
-  console.log(filterProducts);
   return (
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
       {/* filter option code */}
