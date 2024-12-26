@@ -8,9 +8,10 @@ const PlaceOrder = () => {
       <div className="flex flex-col gap-4 w-full sm:max-w-[480px]">
         <div className="text-xl sm:text-2xl my-3">
           <Title text1={"DELIVERY"} text2={"INFORMATION"}></Title>
-              </div>
+        </div>
               <div className="flex gap-3">
-                  
+                  <input className="border border-gray-300 rounded py-1.5 px-3.5 w-full" placeholder="First Name" type="text" />
+                  <input className="border border-gray-300 rounded py-1.5 px-3.5 w-full" placeholder="Last Name" type="text" />
               </div>
       </div>
     </div>
