@@ -43,6 +43,18 @@ const PlaceOrder = () => {
             type="text"
           />
         </div>
+        <div className="flex gap-3">
+          <input
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="Zip code"
+            type="number"
+          />
+          <input
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="Country"
+            type="text"
+          />
+        </div>
       </div>
     </div>
   );
