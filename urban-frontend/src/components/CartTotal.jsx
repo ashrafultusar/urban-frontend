@@ -10,6 +10,12 @@ const CartTotal = () => {
       <div className="text-2xl">
         <Title text1={"TOTAL"} text2={"CART"}></Title>
       </div>
+          <div className="flex flex-col gap-2 text-sm">
+              <div className="flex justify-between">
+                  <p></p>
+                  <p></p>
+              </div>
+      </div>
     </div>
   );
 };
