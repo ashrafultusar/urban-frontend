@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../components/Title";
-import CartTotal from './../components/CartTotal';
+import CartTotal from "./../components/CartTotal";
+import { assets } from "../assets/assets";
 
 const PlaceOrder = () => {
   return (
@@ -62,21 +63,22 @@ const PlaceOrder = () => {
           type="number"
         />
       </div>
-          {/* right side code */}
-          <div className="mt-8">
-              <div className="mt-8 min-w-80">
-                <CartTotal></CartTotal>
-              </div>
-              <div className="mt-12">
-                  <Title text1={'payment'} text2={'method'}></Title>
-                  {/* payment method selection */}
-                  <div className="flex gap-3 flex-col lg:flex-row">
-                      <div className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
-                          
-                      </div>
-                  </div>
-              </div>
+      {/* right side code */}
+      <div className="mt-8">
+        <div className="mt-8 min-w-80">
+          <CartTotal></CartTotal>
+        </div>
+        <div className="mt-12">
+          <Title text1={"payment"} text2={"method"}></Title>
+          {/* payment method selection */}
+          <div className="flex gap-3 flex-col lg:flex-row">
+            <div className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
+              <p className={`min-w-3.5 h-3.5 border rounded-full`}></p>
+              <img className="h-5 mx-4" src={assets.stripe_logo} alt="" />
+            </div>
           </div>
+        </div>
+      </div>
     </div>
   );
 };
