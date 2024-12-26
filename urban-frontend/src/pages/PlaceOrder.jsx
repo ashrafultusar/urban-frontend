@@ -54,13 +54,19 @@ const PlaceOrder = () => {
             placeholder="Country"
             type="text"
           />
-              </div>
-              <input
-            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
-            placeholder="Phone"
-            type="number"
-          />
+        </div>
+        <input
+          className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+          placeholder="Phone"
+          type="number"
+        />
       </div>
+          {/* right side code */}
+          <div className="mt-8">
+              <div className="mt-8 min-w-80">
+                  <div></div>
+              </div>
+          </div>
     </div>
   );
 };
