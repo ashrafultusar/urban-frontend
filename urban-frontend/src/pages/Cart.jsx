@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { ShopContext } from "../context/ShopContex";
 
 const Cart = () => {
-    return (
-        <div>
-            cart  
-        </div>
-    );
+  const { products, currency, cartItems } = useContext(ShopContext);
+
+  return <div></div>;
 };
 
 export default Cart;
