@@ -41,7 +41,7 @@ const Cart = () => {
                   <div className="flex items-start gap-6">
                       <img className="w-16 sm:w-20" src={productData.image[0]} alt="" />
                       <div className="">
-                          
+                          <p className="text-sm sm:text-lg font-medium">{ productData.name}</p>
                       </div>
                   </div>
             </div>
