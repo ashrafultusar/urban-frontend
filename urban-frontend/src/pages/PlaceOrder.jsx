@@ -20,9 +20,29 @@ const PlaceOrder = () => {
             placeholder="Last Name"
             type="text"
           />
-              </div>
-              <input className="border border-gray-300 rounded py-1.5 px-3.5 w-full" placeholder="Email Address" type="email" />
-              <input className="border border-gray-300 rounded py-1.5 px-3.5 w-full" placeholder="Street" type="text" />
+        </div>
+        <input
+          className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+          placeholder="Email Address"
+          type="email"
+        />
+        <input
+          className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+          placeholder="Street"
+          type="text"
+        />
+        <div className="flex gap-3">
+          <input
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="City"
+            type="text"
+          />
+          <input
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="State"
+            type="text"
+          />
+        </div>
       </div>
     </div>
   );
