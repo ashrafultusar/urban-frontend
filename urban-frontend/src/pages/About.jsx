@@ -17,6 +17,9 @@ const About = () => {
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex laborum distinctio assumenda molestias at accusantium vitae, temporibus facere quos minus odio, suscipit eveniet</p>
               </div>
           </div>
+          <div className="text-4xl py-4">
+              <Title text1={'why'} text2={'choose us'}></Title>
+          </div>
     </div>
   );
 };
