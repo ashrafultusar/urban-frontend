@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Login = () => {
+
+    const [currentState,setCurrentState]=useState('Sign Up')
     return (
-        <div>
-            this is login  
-        </div>
+        <form>
+            
+        </form>
     );
 };
 

@@ -43,10 +43,10 @@ const Navbar = () => {
         <div className="dropdown dropdown-end">
           <button tabIndex={0}>
             <div className="w-5 ">
-              <img
+              <Link to={'/login'}><img
                 alt="Tailwind CSS Navbar component"
                 src={assets.profile_icon}
-              />
+              /></Link>
             </div>
           </button>
           <ul
