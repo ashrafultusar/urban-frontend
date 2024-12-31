@@ -30,13 +30,25 @@ const Login = () => {
         type="password"
         className="w-full px-3 py-2 border border-gray-800"
         placeholder="Password"
-          />
-          <div className="w-full flex justify-between text-sm mt-[-8px]">
-              <p className="cursor-pointer">Forgot Your Password?</p>
-              {
-                  currentState==="Login"?<p className="cursor-pointer">Create account</p>:<p className="cursor-pointer">Login Here</p>
-              }
-          </div>
+      />
+      <div className="w-full flex justify-between text-sm mt-[-8px]">
+        <p className="cursor-pointer">Forgot Your Password?</p>
+        {currentState === "Login" ? (
+          <p
+            onClick={() => setCurrentState("Sign Up")}
+            className="cursor-pointer"
+          >
+            Create account
+          </p>
+        ) : (
+          <p
+            onClick={() => setCurrentState("Login")}
+            className="cursor-pointer"
+          >
+            Login Here
+          </p>
+        )}
+      </div>
     </form>
   );
 };
