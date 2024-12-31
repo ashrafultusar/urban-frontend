@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Title from "../components/Title";
 import CartTotal from "./../components/CartTotal";
 import { assets } from "../assets/assets";
+import { ShopContext } from "../context/ShopContex";
 
 const PlaceOrder = () => {
   const [method, setMethod] = useState("cod");
+  const { navigate } = useContext(ShopContext);
 
   return (
     <div className="flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t">
@@ -84,8 +86,8 @@ const PlaceOrder = () => {
                 }`}
               ></p>
               <img className="h-5 mx-4" src={assets.stripe_logo} alt="" />
-                      </div>
-                      
+            </div>
+
             <div
               onClick={() => setMethod("razorpay")}
               className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
@@ -96,8 +98,8 @@ const PlaceOrder = () => {
                 }`}
               ></p>
               <img className="h-5 mx-4" src={assets.razorpay_logo} alt="" />
-                      </div>
-                      
+            </div>
+
             <div
               onClick={() => setMethod("cod")}
               className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
@@ -111,6 +113,11 @@ const PlaceOrder = () => {
                 CASH ON DELIVERY
               </p>
             </div>
+          </div>
+          <div className="w-full text-end mt-8">
+            <button onClick={()=>navigate('/orders')} className="bg-black text-white px-16 py-3 text-sm uppercase">
+              Place Order
+            </button>
           </div>
         </div>
       </div>
