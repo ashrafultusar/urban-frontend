@@ -24,6 +24,7 @@ const Orders = () => {
                                           <p> Quantity: 1</p>
                                           <p>Size: M</p>
                                       </div>
+                                      <p className="mt-2">Date: <span className="text-gray-400">31 December 2024</span></p>
                                   </div>
                               </div>
                           </div>
